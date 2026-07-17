@@ -57,9 +57,9 @@ export default function Hero() {
             {/* Main Persona Image (Carlos) */}
             <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white z-10 bg-gray-100">
               <img 
-                src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=800&q=80" 
+                src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=800&q=80" 
                 alt="Carlos Hernández - Restaurant Owner" 
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-top"
               />
               {/* Gradient overlay for text readability */}
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/20 to-transparent"></div>
