@@ -21,10 +21,14 @@ export default function Problem() {
               <div className="md:col-span-2 bg-brand-light p-8 flex flex-col justify-center items-center text-center relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-32 bg-brand-primary/10"></div>
                 <img 
-                  src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=400&q=80" 
+                  src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=400&q=80" 
                   alt="Carlos Hernández"
-                  className="w-32 h-32 rounded-full object-cover object-center border-4 border-white shadow-lg mb-6 relative z-10" 
+                  className="w-32 h-32 rounded-full object-cover object-top border-4 border-white shadow-lg mb-4 relative z-10" 
                 />
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100 text-orange-800 text-xs font-bold mb-3 relative z-10 uppercase tracking-wider border border-orange-200 shadow-sm">
+                  <Clock className="w-3.5 h-3.5" />
+                  {t.problem.beforeDish}
+                </div>
                 <h3 className="text-2xl font-extrabold text-brand-dark mb-2 relative z-10">{t.problem.meetCarlos}</h3>
                 <p className="text-gray-600 text-sm relative z-10 font-medium">{t.problem.carlosDesc}</p>
               </div>
