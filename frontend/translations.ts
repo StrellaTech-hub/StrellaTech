@@ -30,6 +30,7 @@ export const translations = {
     },
     problem: {
       tag: "The Reality",
+      beforeDish: "Before Dish AI Manager",
       meetCarlos: "Who is Carlos Hernández?",
       carlosDesc: "A family restaurant owner who works every day in the operation of his business.",
       carlosAge: "32 years old",
@@ -183,6 +184,7 @@ export const translations = {
     },
     problem: {
       tag: "La Realidad",
+      beforeDish: "Antes de Dish AI Manager",
       meetCarlos: "¿Quién es Carlos Hernández?",
       carlosDesc: "Dueño de un restaurante familiar que trabaja todos los días en la operación de su negocio.",
       carlosAge: "32 años",
