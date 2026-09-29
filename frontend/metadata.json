@@ -1,4 +1,4 @@
 {
-  "name": "Dish AI Manager by StrellaTech",
-  "description": "Full-stack unified application (Node.js/Express + React) ready for Google Cloud Run deployment. Includes multi-language support (ES/EN)."
+  "name": "Dish Manager",
+  "description": "Software inteligente de toma de decisiones para pequeños restaurantes."
 }
