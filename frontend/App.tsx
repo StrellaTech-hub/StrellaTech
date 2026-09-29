@@ -1,4 +1,5 @@
 import React, { useState, useEffect, createContext, useContext, useRef } from 'react';
+import { AppRouter } from './CorporateHome';
 import { 
   ChefHat, 
   TrendingUp, 
@@ -1097,7 +1098,7 @@ const Footer = () => {
 
 // --- Main App ---
 
-export default function App() {
+export function DishManagerApp() {
   return (
     <LanguageProvider>
       <div className="min-h-screen bg-background selection:bg-brandAccent/20 selection:text-brandAccent">
@@ -1114,4 +1115,8 @@ export default function App() {
       </div>
     </LanguageProvider>
   );
+}
+
+export default function App() {
+  return <AppRouter DishManagerApp={DishManagerApp} />;
 }
