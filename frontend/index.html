@@ -1,112 +1,122 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
   <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StrellaTech | Tecnología aplicada a problemas reales</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            background: '#FCFBFA', // Warm white base for luminosity and approachability
-            surface: '#FFFFFF',
-            surfaceHover: '#F5F3FF', // Very soft purple for hovers
-            primaryText: '#1F2937', // Gray 800 - Warm dark gray, never absolute black
-            secondaryText: '#4B5563', // Gray 600 - Warm neutral gray
-            brand: '#6D28D9', // Purple 700 - Deep Purple (Trust, Intelligence)
-            brandAccent: '#8B5CF6', // Purple 500 - Soft Purple (AI, Actions)
-            accentOrange: '#F97316', // Orange 500 - Warm Orange (Human, Energy, Support)
-            accentOrangeLight: '#FFEDD5', // Orange 100 - Very light orange for badges
-            ai: '#8B5CF6', // Soft Violet - Exclusively for AI
-            success: '#10B981', // Modern green for positive opportunities
-            warning: '#F59E0B', // Elegant amber
-            footerStart: '#2E1065', // Deep purple for footer
-            footerEnd: '#4C1D95', // Lighter deep purple for footer depth
-          },
-          fontFamily: {
-            sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'],
-          },
-          boxShadow: {
-            'soft': '0 4px 20px -2px rgba(109, 40, 217, 0.03)',
-            'soft-lg': '0 10px 40px -5px rgba(109, 40, 217, 0.06)',
-            'ai-glow': '0 0 30px -5px rgba(139, 92, 246, 0.15)',
-            'orange-glow': '0 0 30px -5px rgba(249, 115, 22, 0.15)',
-            'footer-btn': '0 0 30px rgba(255, 255, 255, 0.2)',
-          },
-          animation: {
-            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-            'float': 'float 6s ease-in-out infinite',
-            'float-delayed': 'float 6s ease-in-out 3s infinite',
-            'float-slow': 'float 8s ease-in-out 1s infinite',
-            'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-          },
-          keyframes: {
-            float: {
-              '0%, 100%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-8px)' },
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StrellaTech | Tecnología aplicada a problemas reales</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N3E1F4EV13"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-N3E1F4EV13');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: '#FCFBFA',
+              surface: '#FFFFFF',
+              surfaceHover: '#F5F3FF',
+              primaryText: '#1F2937',
+              secondaryText: '#4B5563',
+              brand: '#6D28D9',
+              brandAccent: '#8B5CF6',
+              accentOrange: '#F97316',
+              accentOrangeLight: '#FFEDD5',
+              ai: '#8B5CF6',
+              success: '#10B981',
+              warning: '#F59E0B',
+              footerStart: '#2E1065',
+              footerEnd: '#4C1D95',
             },
-            fadeInUp: {
-              '0%': { opacity: 0, transform: 'translateY(20px)' },
-              '100%': { opacity: 1, transform: 'translateY(0)' },
+            fontFamily: {
+              sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'],
+            },
+            boxShadow: {
+              'soft': '0 4px 20px -2px rgba(109, 40, 217, 0.03)',
+              'soft-lg': '0 10px 40px -5px rgba(109, 40, 217, 0.06)',
+              'ai-glow': '0 0 30px -5px rgba(139, 92, 246, 0.15)',
+              'orange-glow': '0 0 30px -5px rgba(249, 115, 22, 0.15)',
+              'footer-btn': '0 0 30px rgba(255, 255, 255, 0.2)',
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'float-delayed': 'float 6s ease-in-out 3s infinite',
+              'float-slow': 'float 8s ease-in-out 1s infinite',
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-8px)' },
+              },
+              fadeInUp: {
+                '0%': { opacity: 0, transform: 'translateY(20px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              }
+            },
+            backgroundImage: {
+              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+              'hero-glow': 'radial-gradient(circle at top right, rgba(139, 92, 246, 0.04) 0%, rgba(252, 251, 250, 0) 60%)',
+              'ai-gradient': 'linear-gradient(135deg, rgba(139,92,246,0.08) 0%, rgba(249,115,22,0.03) 100%)',
+              'footer-gradient': 'linear-gradient(135deg, #2E1065 0%, #4C1D95 50%, #3B0764 100%)',
             }
-          },
-          backgroundImage: {
-            'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-            'hero-glow': 'radial-gradient(circle at top right, rgba(139, 92, 246, 0.04) 0%, rgba(252, 251, 250, 0) 60%)',
-            'ai-gradient': 'linear-gradient(135deg, rgba(139,92,246,0.08) 0%, rgba(249,115,22,0.03) 100%)',
-            'footer-gradient': 'linear-gradient(135deg, #2E1065 0%, #4C1D95 50%, #3B0764 100%)',
           }
         }
       }
-    }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #FCFBFA;
-      color: #1F2937;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    /* Custom scrollbar for a sleeker look */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #FCFBFA;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #E5E7EB;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #D1D5DB;
-    }
-    
-    /* Utility class for text gradients */
-    .text-gradient {
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-N3E1F4EV13"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    </script>
 
-  gtag('config', 'G-N3E1F4EV13');
-</script> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #FCFBFA;
+        color: #1F2937;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* Custom scrollbar for a sleeker look */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #FCFBFA;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #E5E7EB;
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #D1D5DB;
+      }
+
+      /* Utility class for text gradients */
+      .text-gradient {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
   </head>
-<body>
-  <div id="root"></div>
-  <script type="module" src="./index.tsx"></script>
-<script type="module" src="/index.js"></script></body>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+    <script type="module" src="/index.js"></script>
+  </body>
 </html>
