@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import NinaManagerLanding from './NinaManagerLanding';
 import { ArrowRight, Menu, X, Utensils, BriefcaseBusiness, Languages, Lightbulb, Sparkles, Boxes, Workflow, ScanText } from 'lucide-react';
 
 const solutions = [
@@ -49,6 +50,6 @@ export default function CorporateHome() {
 
 export function FuturePage({ title }: { title: string }) { return <div className="grid min-h-screen place-items-center bg-[#050816] px-6 text-center text-white"><div><p className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-300">StrellaTech</p><h1 className="mt-5 text-5xl font-semibold tracking-[-0.05em]">{title}</h1><p className="mt-4 text-slate-400">Próximamente.</p><a href="/" className="mt-8 inline-block rounded-full bg-gradient-to-r from-cyan-300 to-blue-500 px-6 py-3 text-sm font-bold text-[#050816]">Volver a StrellaTech</a></div></div>; }
 
-export function AppRouter({ DishManagerApp }: { DishManagerApp: React.ComponentType }) { const path = window.location.pathname; if (path === '/dish-manager') return <DishManagerApp />; if (path === '/nina-manager') return <FuturePage title="Nina Manager" />; if (path === '/traductor-profesional') return <FuturePage title="Traductor Profesional" />; if (path === '/bootcamp') return <FuturePage title="Tu primera aplicación empresarial con IA" />; if (path === '/nosotros') return <FuturePage title="Nosotros" />; return <CorporateHome />; }
+export function AppRouter({ DishManagerApp }: { DishManagerApp: React.ComponentType }) { const path = window.location.pathname; if (path === '/dish-manager') return <DishManagerApp />; if (path === '/nina-manager') return <NinaManagerLanding />; if (path === '/traductor-profesional') return <FuturePage title="Traductor Profesional" />; if (path === '/bootcamp') return <FuturePage title="Tu primera aplicación empresarial con IA" />; if (path === '/nosotros') return <FuturePage title="Nosotros" />; return <CorporateHome />; }
 
 export { solutions };
