@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import NinaManagerLanding from './NinaManagerLanding';
 import OctodeskLanding from './OctodeskLanding';
-import { ArrowRight, Menu, X, Utensils, BriefcaseBusiness, Languages, Lightbulb, Sparkles, Boxes, Workflow, ScanText } from 'lucide-react';
+import { ArrowRight, Menu, X, Utensils, BriefcaseBusiness, Languages, Lightbulb, Sparkles, Boxes, Workflow, ScanText, ClipboardCheck } from 'lucide-react';
 
 const solutions = [
-  { icon: Utensils, title: 'Dish Manager', subtitle: 'Gestión empresarial para restaurantes.', description: 'Una plataforma para gestionar las operaciones de un restaurante desde un mismo lugar.', href: '/dish-manager', tone: 'from-cyan-400/20 to-blue-600/10' },
   { icon: BriefcaseBusiness, title: 'Nina Manager', subtitle: 'ERP con IA para emprendedoras.', description: 'Una solución para gestionar tu negocio desde un solo lugar y contar con apoyo inteligente para el día a día.', href: '/nina-manager', tone: 'from-fuchsia-400/20 to-violet-600/10' },
   { icon: Languages, title: 'Traductor Profesional', subtitle: 'Del documento original al Word traducido.', description: 'Convierte PDFs, imágenes y documentos escaneados en documentos Word estructurados y traducidos para facilitar el trabajo de profesionales de la traducción.', href: '/traductor-profesional', tone: 'from-blue-400/20 to-violet-600/10' },
-  { icon: Boxes, title: 'Octodesk', subtitle: 'Productividad · Gestión', description: 'Gestión de proyectos, tareas y finanzas para profesionales independientes y pequeños equipos.', href: '/octodesk', tone: 'from-violet-400/20 to-fuchsia-600/10' },
+  { icon: Utensils, title: 'Dish Manager', subtitle: 'Gestión empresarial para restaurantes.', description: 'Una plataforma para gestionar las operaciones de un restaurante desde un mismo lugar.', href: '/dish-manager', tone: 'from-cyan-400/20 to-blue-600/10' },
+  { icon: ClipboardCheck, title: 'Octodesk', subtitle: 'Productividad · Gestión', description: 'Gestión de proyectos, tareas y finanzas para profesionales independientes y pequeños equipos.', href: '/octodesk', tone: 'from-violet-400/20 to-fuchsia-600/10' },
 ];
 
 const steps = [
