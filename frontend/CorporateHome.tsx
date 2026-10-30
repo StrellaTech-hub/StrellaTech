@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import NinaManagerLanding from './NinaManagerLanding';
+import OctodeskLanding from './OctodeskLanding';
 import { ArrowRight, Menu, X, Utensils, BriefcaseBusiness, Languages, Lightbulb, Sparkles, Boxes, Workflow, ScanText } from 'lucide-react';
 
 const solutions = [
   { icon: Utensils, title: 'Dish Manager', subtitle: 'Gestión empresarial para restaurantes.', description: 'Una plataforma para gestionar las operaciones de un restaurante desde un mismo lugar.', href: '/dish-manager', tone: 'from-cyan-400/20 to-blue-600/10' },
   { icon: BriefcaseBusiness, title: 'Nina Manager', subtitle: 'ERP con IA para emprendedoras.', description: 'Una solución para gestionar tu negocio desde un solo lugar y contar con apoyo inteligente para el día a día.', href: '/nina-manager', tone: 'from-fuchsia-400/20 to-violet-600/10' },
   { icon: Languages, title: 'Traductor Profesional', subtitle: 'Del documento original al Word traducido.', description: 'Convierte PDFs, imágenes y documentos escaneados en documentos Word estructurados y traducidos para facilitar el trabajo de profesionales de la traducción.', href: '/traductor-profesional', tone: 'from-blue-400/20 to-violet-600/10' },
+  { icon: Boxes, title: 'Octodesk', subtitle: 'Productividad · Gestión', description: 'Gestión de proyectos, tareas y finanzas para profesionales independientes y pequeños equipos.', href: '/octodesk', tone: 'from-violet-400/20 to-fuchsia-600/10' },
 ];
 
 const steps = [
@@ -50,6 +52,6 @@ export default function CorporateHome() {
 
 export function FuturePage({ title }: { title: string }) { return <div className="grid min-h-screen place-items-center bg-[#050816] px-6 text-center text-white"><div><p className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-300">StrellaTech</p><h1 className="mt-5 text-5xl font-semibold tracking-[-0.05em]">{title}</h1><p className="mt-4 text-slate-400">Próximamente.</p><a href="/" className="mt-8 inline-block rounded-full bg-gradient-to-r from-cyan-300 to-blue-500 px-6 py-3 text-sm font-bold text-[#050816]">Volver a StrellaTech</a></div></div>; }
 
-export function AppRouter({ DishManagerApp }: { DishManagerApp: React.ComponentType }) { const path = window.location.pathname; if (path === '/dish-manager') return <DishManagerApp />; if (path === '/nina-manager') return <NinaManagerLanding />; if (path === '/traductor-profesional') return <FuturePage title="Traductor Profesional" />; if (path === '/bootcamp') return <FuturePage title="Tu primera aplicación empresarial con IA" />; if (path === '/nosotros') return <FuturePage title="Nosotros" />; return <CorporateHome />; }
+export function AppRouter({ DishManagerApp }: { DishManagerApp: React.ComponentType }) { const path = window.location.pathname; if (path === '/dish-manager') return <DishManagerApp />; if (path === '/nina-manager') return <NinaManagerLanding />; if (path === '/octodesk') return <OctodeskLanding />; if (path === '/traductor-profesional') return <FuturePage title="Traductor Profesional" />; if (path === '/bootcamp') return <FuturePage title="Tu primera aplicación empresarial con IA" />; if (path === '/nosotros') return <FuturePage title="Nosotros" />; return <CorporateHome />; }
 
 export { solutions };
