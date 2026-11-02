@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import NinaManagerLanding from './NinaManagerLanding';
 import OctodeskLanding from './OctodeskLanding';
+import MissionLanding from './MissionLanding';
 import { ArrowRight, Menu, X, Utensils, BriefcaseBusiness, Languages, Lightbulb, Sparkles, Boxes, Workflow, ScanText, ClipboardCheck, ClipboardList } from 'lucide-react';
 
 const solutions = [
@@ -28,7 +29,7 @@ export default function CorporateHome() {
         <a href="#inicio" onClick={closeMenu} className="flex items-center gap-3 text-sm font-semibold tracking-[0.2em]"><span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-cyan-300 via-blue-500 to-fuchsia-500 text-sm font-black text-[#050816] shadow-[0_0_25px_rgba(34,211,238,.35)]">S</span> STRELLATECH</a>
         <button className="rounded-lg p-2 text-slate-200 lg:hidden" aria-label="Abrir menú" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</button>
         <nav className={`${menuOpen ? 'flex' : 'hidden'} absolute left-0 right-0 top-full flex-col gap-5 border-b border-white/10 bg-[#080c20] px-6 py-6 lg:static lg:flex lg:flex-row lg:items-center lg:border-0 lg:bg-transparent lg:p-0`}>
-          {['Soluciones', 'Aprendizaje', 'Nosotros', 'Contacto'].map((item, index) => <a key={item} href={['#soluciones', '#aprendizaje', '#nosotros', '#contacto'][index]} onClick={closeMenu} className="text-sm text-slate-400 transition hover:text-cyan-300">{item}</a>)}
+          {['Soluciones', 'Aprendizaje', 'Nuestra esencia', 'Nosotros', 'Contacto'].map((item, index) => <a key={item} href={['#soluciones', '#aprendizaje', '/mision', '#nosotros', '#contacto'][index]} onClick={closeMenu} className={`text-sm transition hover:text-cyan-300 ${item === 'Nuestra esencia' ? 'text-cyan-200' : 'text-slate-400'}`}>{item}</a>)}
           <a href="#contacto" onClick={closeMenu} className="rounded-full border border-cyan-300/40 px-4 py-2 text-sm text-cyan-200 transition hover:bg-cyan-300/10">Construyamos algo</a>
         </nav>
       </div>
@@ -52,6 +53,6 @@ export default function CorporateHome() {
 
 export function FuturePage({ title }: { title: string }) { return <div className="grid min-h-screen place-items-center bg-[#050816] px-6 text-center text-white"><div><p className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-300">StrellaTech</p><h1 className="mt-5 text-5xl font-semibold tracking-[-0.05em]">{title}</h1><p className="mt-4 text-slate-400">Próximamente.</p><a href="/" className="mt-8 inline-block rounded-full bg-gradient-to-r from-cyan-300 to-blue-500 px-6 py-3 text-sm font-bold text-[#050816]">Volver a StrellaTech</a></div></div>; }
 
-export function AppRouter({ DishManagerApp }: { DishManagerApp: React.ComponentType }) { const path = window.location.pathname; if (path === '/dish-manager') return <DishManagerApp />; if (path === '/nina-manager') return <NinaManagerLanding />; if (path === '/octodesk') return <OctodeskLanding />; if (path === '/traductor-profesional') return <FuturePage title="Traductor Profesional" />; if (path === '/bootcamp') return <FuturePage title="Tu primera aplicación empresarial con IA" />; if (path === '/nosotros') return <FuturePage title="Nosotros" />; return <CorporateHome />; }
+export function AppRouter({ DishManagerApp }: { DishManagerApp: React.ComponentType }) { const path = window.location.pathname; if (path === '/dish-manager') return <DishManagerApp />; if (path === '/nina-manager') return <NinaManagerLanding />; if (path === '/octodesk') return <OctodeskLanding />; if (path === '/mision') return <MissionLanding />; if (path === '/traductor-profesional') return <FuturePage title="Traductor Profesional" />; if (path === '/bootcamp') return <FuturePage title="Tu primera aplicación empresarial con IA" />; if (path === '/nosotros') return <FuturePage title="Nosotros" />; return <CorporateHome />; }
 
 export { solutions };
